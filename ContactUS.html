@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+	<link rel="stylesheet" href="ContactUs.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <h1>Contact Us</h1>
+  <form id="contact-form" method="post" action="#">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name.." required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email.." required>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Wnat to contact for.." required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+
+    <label for="captcha">Captcha</label>
+    <div class ="captcha_box">
+      <div class="wrapper">
+        <div class ="captcha_background" style="float:left">
+        <canvas id="canvas" width="200" height="70" ></canvas>
+      </div>
+    </div>
+      <button id="refresh-captcha" type="button" style="--clr:#6eff3e; float: right"><ion-icon name="refresh-outline"></ion-icon></button>
+      </div>
+        <input type="text" id="captcha-input" name="captcha" placeholder="Enter CAPTCHA" required>
+    <button type="submit" style="--clr:#6eff3e">SUBMIT</button>
+  </form>
+</div>
+	<script src="ContactUs.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
